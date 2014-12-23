@@ -29,16 +29,18 @@ for(var k in allMyServices) {
   }
 }
 
-var ngels = document.querySelectorAll('.ng-scope')
+// the nodes this adds don't usually seem terribly helpful:
 
-for (var i in ngels) {
-  var el = angular.element(ngels[i]);
-  var scope = el.scope();
-  for (var j in scope) {
-    var v = scope[j];
-    if (scope.hasOwnProperty(j) && (typeof v === 'function')) {
-      console.log(j)
-      vizone.patch(scope, j, {title:'scope '+scope.$id+'.'+j});
-    }
-  }
-}
+//var ngels = document.querySelectorAll('.ng-scope')
+//
+//for (var i in ngels) {
+//  var el = angular.element(ngels[i]);
+//  var scope = el.scope();
+//  for (var j in scope) {
+//    var v = scope[j];
+//    if (scope.hasOwnProperty(j) && (typeof v === 'function')) {
+//      console.log(j)
+//      vizone.patch(scope, j, {title:'scope '+scope.$id+'.'+j});
+//    }
+//  }
+//}
